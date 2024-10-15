@@ -1,6 +1,7 @@
 import Head from "next/head";
 import styles from "@/styles/Home.module.css";
 import { Button } from "@mui/material";
+import Link from "next/link";
 
 
 export default function Home() {
@@ -15,10 +16,10 @@ export default function Home() {
       <div>
         
         <h1>Hello World</h1>
-          <Button style={{backgroundColor: 'yellow'}} variant="text">Text</Button>
-          <Button variant="contained">Contained</Button>
-        <Button variant="outlined">Outlined</Button>
-        <Button></Button> 
+        
+        <Link href="/Apadrinhamento" passHref>
+          <Button>Apadrinhamento</Button>
+        </Link> 
         
       </div>
     </>
