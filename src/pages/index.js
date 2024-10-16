@@ -1,11 +1,18 @@
 import Head from "next/head";
 import styles from "@/styles/Home.module.css";
-import { Button, StyledInput, HelperText, FormControl, Label } from "@mui/material";
+import {
+  Button,
+  StyledInput,
+  HelperText,
+  FormControl,
+  Label,
+} from "@mui/material";
 import Link from "next/link";
 import Sobre from "./Sobre";
 
-
 export default function Home() {
+
+  
   return (
     <>
       <Head>
@@ -14,19 +21,39 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div> 
-              {/* O HTML vai dentro desta <div></div> */}
-        <nav style={{background: 'RGBA(255,255,255,0.2)', display:'flex', AlignItems: 'center'}}>
+      <div>
+        {/* O HTML vai dentro desta <div></div> */}
+        <nav
+          style={{
+            background: "RGBA(255,255,255,0.2)",
+            display: "flex",
+            AlignItems: "center",
+          }}
+        >
           <h3>Papai Noel</h3>
-          <Button style={{color:'white', }} variant="text">Sobre</Button>
-          <Button style={{color:'white'}} variant="text">Faça um pedido</Button>
-          <Link href="/Apadrinhamento" passHref><Button style={{color:'white'}} variant="text">Apadrinhar</Button></Link>
-          <Button style={{color:'white'}} variant="text">Cadastra-se</Button>
-          <Button style={{backgroundColor: 'green', color:'white'}} variant="text">Login</Button>
+          <Button style={{ color: "white" }} variant="text">
+            Sobre
+          </Button>
+          <Button style={{ color: "white" }} variant="text">
+            Faça um pedido
+          </Button>
+          <Link href="/Apadrinhamento" passHref>
+            <Button style={{ color: "white" }} variant="text">
+              Apadrinhar
+            </Button>
+          </Link>
+          <Button style={{ color: "white" }} variant="text">
+            Cadastra-se
+          </Button>
+          <Button
+            style={{ backgroundColor: "green", color: "white" }}
+            variant="text"
+          >
+            Login
+          </Button>
         </nav>
-        <Sobre/>
+        <Sobre />
       </div>
     </>
   );
 }
-
