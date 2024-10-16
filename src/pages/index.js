@@ -6,6 +6,23 @@ import Sobre from "./Sobre";
 
 
 export default function Home() {
+
+  const styles = {
+    navigator{
+      background: RGBA (255,255,255,0.2); 
+      display:flex; 
+      alignItems: center;
+      borderRadius:30px; 
+      padding: 10px 0px; 
+      justifyContent:center;
+      fontSize:15px'; 
+      border: 2px solid white; 
+      maxWidth:85%; 
+      margin:0% 10%;
+    }
+  }
+
+
   return (
     <>
       <Head>
@@ -16,7 +33,7 @@ export default function Home() {
       </Head>
       <div style={{backgroundColor: 'red', backgroundImage: 'linear-gradient(to bottom, #740E10, #C13437)',height: '100vh', paddingTop: '2%'}}> 
               {/* O HTML vai dentro desta <div></div> */}
-        <nav style={{background: 'RGBA(255,255,255,0.2)', display:'flex', alignItems: 'center', borderRadius:'30px', padding: '10px 0px', justifyContent:'center', fontSize:'15px', border: '2px solid white', maxWidth:'85%',margin:'0% 10%'}}>
+        <nav style={{styles.navigator}}>
           <h3 style={{fontFamily:'Poppins', fontSize:'20px'}}>Papai Noel</h3>
           <Button style={{color:'white', fontFamily:'Poppins', fontSize:'12px'}} variant="text">Sobre</Button>
           <Button style={{color:'white', fontFamily:'Poppins', fontSize:'12px'}} variant="text">Faça um pedido</Button>
