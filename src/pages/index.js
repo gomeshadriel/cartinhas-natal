@@ -17,7 +17,7 @@ export default function Home() {
       <div style={{backgroundColor: 'red', backgroundImage: 'linear-gradient(to bottom, #740E10, #C13437)',height: '100vh', paddingTop: '2%'}}> 
               {/* O HTML vai dentro desta <div></div> */}
         <nav style={{background: 'RGBA(255,255,255,0.2)', display:'flex', alignItems: 'center', borderRadius:'30px', padding: '10px 0px', justifyContent:'center', fontSize:'15px', border: '2px solid white', maxWidth:'85%',margin:'0% 10%'}}>
-          <h3 style={{fontFamily:'Pacifico, cursive', fontSize:'20px'}}>Papai Noel</h3>
+          <h3 style={{fontFamily:'Poppins', fontSize:'20px'}}>Papai Noel</h3>
           <Button style={{color:'white', fontFamily:'Poppins', fontSize:'12px'}} variant="text">Sobre</Button>
           <Button style={{color:'white', fontFamily:'Poppins', fontSize:'12px'}} variant="text">Faça um pedido</Button>
           <Link href="/Apadrinhamento" passHref><Button style={{color:'white', fontFamily:'Poppins', fontSize:'12px'}} variant="text">Apadrinhar</Button></Link>
@@ -26,17 +26,16 @@ export default function Home() {
         </nav>
         <span style={{display: 'Flex', justifyContent:'center', gap:'2%'}}>
           <div style={{maxWidth:'85%',margin:'0% 10%'}}>
-            <p style={{fontSize:'70px', fontFamily:'Pacifico, cursive'}}>Neste natal faça a alegria de uma criança!</p>
+            <p style={{fontSize:'70px', fontFamily:'Poppins'}}>Neste natal faça a alegria de uma criança!</p>
             <div style={{display:'flex',gap:'5%'}}>
               <Button style={{backgroundColor: 'Yellow', color:'white', fontFamily:'Poppins', fontSize:'12px'}} variant="text">Apadrinhar</Button>
               <Button style={{backgroundColor: 'Yellow', color:'white', fontFamily:'Poppins', fontSize:'12px'}} variant="text">Faça um pedido</Button>
             </div>
           </div>
-          <img src="./img/Vector.png" alt="Descrição da imagem" className="minha-imagem" />
+          <img src="./img/papai.png" alt="Descrição da imagem" className="minha-imagem" />
         </span>
       </div>
       <Sobre/>
     </>
   );
 }
-
