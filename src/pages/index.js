@@ -9,7 +9,7 @@ export default function Home() {
 
   const styles = {
     intro: {
-      backgroundImage: 'url(/img/BackgroundVermelho.png)',
+      backgroundImage: 'url(/public/img/BackgroundVermelho.png)',
       height: '100vh', 
       paddingTop: '2%',
     },
