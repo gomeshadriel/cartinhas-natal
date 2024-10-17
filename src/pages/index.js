@@ -9,10 +9,97 @@ import {
 } from "@mui/material";
 import Link from "next/link";
 import Sobre from "./Sobre";
+// import RedeemIcon from '@mui/icons-material/Redeem';
+
+
 
 export default function Home() {
 
-  
+  const styles = {
+    intro: {
+      backgroundImage: 'url(img/BackgroundVermelho.png)',
+      height: '100vh', 
+      paddingTop: '2%',
+    },
+
+    navigator: {
+      background: "rgba(255,255,255,0.2)", 
+      display:"flex",
+      alignItems: "center",
+      borderRadius: "30px",
+      padding: "10px 0px",
+      justifyContent: "center",
+      fontSize: "15px",
+      border: "2px solid white",
+      maxWidth:"85%",
+      margin: "0% 15%",
+      gap: "16%"
+    },
+
+    buttonNav: {
+      color:'white', 
+      fontFamily:'Poppins', 
+      fontSize:'16px',
+      textTransform: "none",
+    },
+
+    conecte: {
+      backgroundColor: 'green', 
+      color:'white', 
+      fontFamily:'Poppins',
+      fontSize:'16px',
+      textTransform: "none",
+    },
+
+    noel: {
+      fontFamily:'Poppins', 
+      fontSize:'20px',
+      alignItens: "center",
+      alignContent: "center",
+    },
+
+    buttonsTitle: {
+      backgroundColor: '#CFBD2E', 
+      color:'white', 
+      fontFamily:'Poppins', 
+      fontSize:'17px',
+      marginLeft: "10%", 
+      height:"50%",
+      width: "60%",
+      textTransform: "none",
+    },
+
+    gruopBottonsTitle: {
+      display:'flex',
+      gap:'5%',
+      height:"15vh",  
+    },
+
+    title: {
+      fontSize:'80px', 
+      fontFamily:'Poppins',
+      marginLeft: "10%", 
+    },
+
+    groupTitle: {
+      maxWidth:'85%',
+      display: "flex",
+      flexDirection: "column",
+      gap: "7vh",
+    },
+
+    noelGroup: {
+      display: 'Flex', 
+      justifyContent:'center', 
+      gap:'12%',
+      maxWidth:"85%",
+      margin: "0% 15%",
+      alignItems: "center",
+      marginTop: "9vh",
+    },
+  };
+
+
   return (
     <>
       <Head>
@@ -21,39 +108,39 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div>
-        {/* O HTML vai dentro desta <div></div> */}
-        <nav
-          style={{
-            background: "RGBA(255,255,255,0.2)",
-            display: "flex",
-            AlignItems: "center",
-          }}
-        >
-          <h3>Papai Noel</h3>
-          <Button style={{ color: "white" }} variant="text">
-            Sobre
-          </Button>
-          <Button style={{ color: "white" }} variant="text">
-            Faça um pedido
-          </Button>
-          <Link href="/Apadrinhamento" passHref>
-            <Button style={{ color: "white" }} variant="text">
-              Apadrinhar
-            </Button>
-          </Link>
-          <Button style={{ color: "white" }} variant="text">
-            Cadastra-se
-          </Button>
-          <Button
-            style={{ backgroundColor: "green", color: "white" }}
-            variant="text"
-          >
-            Login
-          </Button>
+
+      {/* O HTML vai dentro desta <div></div> */}
+      <div style={styles.intro}> 
+
+        <nav style={styles.navigator}>
+            {/* <i RedeemIcon/> */}
+            <h3 style={styles.noel}>Papai Noel</h3>
+            
+          <div>
+           <Link href="/Sobre" passHref><Button style={styles.buttonNav} variant="text">Sobre</Button></Link>
+            <Link href="/Pedido" passHref><Button style={styles.buttonNav} variant="text">Faça um pedido</Button></Link>
+            <Link href="/Apadrinhamento" passHref><Button style={styles.buttonNav} variant="text">Apadrinhar</Button></Link>
+          </div>
+          <div>
+            <Link href="/Login" passHref><Button style={styles.buttonNav} variant="text">Cadastra-se</Button></Link>
+            <Link href="/Login" passHref><Button style={styles.conecte} variant="text">Login</Button></Link>
+          </div>
         </nav>
-        <Sobre />
+
+        <span style={styles.noelGroup}>
+          <div style={styles.groupTitle}>
+            <p style={styles.title}>Neste natal, faça a alegria de uma criança!</p>
+            <div style={styles.gruopBottonsTitle}>
+              <Button style={styles.buttonsTitle} variant="text">Apadrinhar</Button>
+              <Button style={styles.buttonsTitle} variant="text">Faça um pedido</Button>
+            </div>
+          </div>
+          <img src="./img/papai.png" alt="Descrição da imagem" className="minha-imagem"/>
+        </span>
+
       </div>
+
+      <Sobre/>
     </>
   );
 }
