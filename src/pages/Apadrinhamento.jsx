@@ -78,7 +78,8 @@ const Apadrinhamento = () => {
       flexWrap: 'wrap',
       justifyContent: 'center',
       gap: '24px',
-      maxWidth: '1000px',
+      minWidth: '1000px',
+      margin: '0vh 40vh'
     },
     viewAllButton: {
       backgroundColor: '#388e3c',
