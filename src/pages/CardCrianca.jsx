@@ -1,5 +1,7 @@
 // CardCrianca.jsx
 import React from 'react';
+import RedeemIcon from '@mui/icons-material/Redeem';
+import { Button } from '@mui/material';
 
 const CardCrianca = ({ name, school, wish, image }) => {
   const styles = {
@@ -14,6 +16,7 @@ const CardCrianca = ({ name, school, wish, image }) => {
       maxWidth: '300px',
       margin: '10px',
       gap: '16px'
+      
     },
     header: {
       display: 'flex',
@@ -35,6 +38,7 @@ const CardCrianca = ({ name, school, wish, image }) => {
       objectFit: 'cover',
     },
     button: {
+      textTransform: 'none',
       backgroundColor: '#a5d6a7',
       border: 'none',
       padding: '10px 20px',
@@ -42,6 +46,9 @@ const CardCrianca = ({ name, school, wish, image }) => {
       color: 'green',
       fontWeight: 600,
       cursor: 'pointer',
+      textAlign: 'center',
+      gap: '8px',
+      fontSize: '14px'
     },
     buttonHover: {
       backgroundColor: '#81c784',
@@ -59,9 +66,9 @@ const CardCrianca = ({ name, school, wish, image }) => {
         </div>
       </div>
       <p>{wish}</p>
-      <button style={styles.button}>
-        <i className="fas fa-gift"></i> Presentear
-      </button>
+      <Button style={styles.button}>
+        <i className="fas fa-gift"></i><RedeemIcon/> Presentear <RedeemIcon/> 
+      </Button>
     </div>
   );
 };
