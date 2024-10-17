@@ -3,13 +3,15 @@ import styles from "@/styles/Home.module.css";
 import { Button, StyledInput, HelperText, FormControl, Label } from "@mui/material";
 import Link from "next/link";
 import Sobre from "./Sobre";
+// import RedeemIcon from '@mui/icons-material/Redeem';
+
 
 
 export default function Home() {
 
   const styles = {
     intro: {
-      backgroundImage: 'url(/public/img/BackgroundVermelho.png)',
+      backgroundImage: 'url(img/BackgroundVermelho.png)',
       height: '100vh', 
       paddingTop: '2%',
     },
@@ -25,34 +27,40 @@ export default function Home() {
       border: "2px solid white",
       maxWidth:"85%",
       margin: "0% 15%",
+      gap: "16%"
     },
 
     buttonNav: {
       color:'white', 
       fontFamily:'Poppins', 
-      fontSize:'12px',
+      fontSize:'16px',
+      textTransform: "none",
     },
 
     conecte: {
       backgroundColor: 'green', 
       color:'white', 
       fontFamily:'Poppins',
-      fontSize:'12px',
+      fontSize:'16px',
+      textTransform: "none",
     },
 
     noel: {
       fontFamily:'Poppins', 
       fontSize:'20px',
+      alignItens: "center",
+      alignContent: "center",
     },
 
     buttonsTitle: {
       backgroundColor: '#CFBD2E', 
       color:'white', 
       fontFamily:'Poppins', 
-      fontSize:'1p5x',
+      fontSize:'17px',
       marginLeft: "10%", 
-      height:"60%",
+      height:"50%",
       width: "60%",
+      textTransform: "none",
     },
 
     gruopBottonsTitle: {
@@ -71,7 +79,7 @@ export default function Home() {
       maxWidth:'85%',
       display: "flex",
       flexDirection: "column",
-      gap: "4vh",
+      gap: "7vh",
     },
 
     noelGroup: {
@@ -99,12 +107,18 @@ export default function Home() {
       <div style={styles.intro}> 
 
         <nav style={styles.navigator}>
-          <h3 style={styles.noel}>Papai Noel</h3>
-          <Link href="/Sobre" passHref><Button style={styles.buttonNav} variant="text">Sobre</Button></Link>
-          <Link href="/Pedido" passHref><Button style={styles.buttonNav} variant="text">Faça um pedido</Button></Link>
-          <Link href="/Apadrinhamento" passHref><Button style={styles.buttonNav} variant="text">Apadrinhar</Button></Link>
-          <Link href="/Login" passHref><Button style={styles.buttonNav} variant="text">Cadastra-se</Button></Link>
-          <Link href="/Login" passHref><Button style={styles.conecte} variant="text">Login</Button></Link>
+            {/* <i RedeemIcon/> */}
+            <h3 style={styles.noel}>Papai Noel</h3>
+            
+          <div>
+           <Link href="/Sobre" passHref><Button style={styles.buttonNav} variant="text">Sobre</Button></Link>
+            <Link href="/Pedido" passHref><Button style={styles.buttonNav} variant="text">Faça um pedido</Button></Link>
+            <Link href="/Apadrinhamento" passHref><Button style={styles.buttonNav} variant="text">Apadrinhar</Button></Link>
+          </div>
+          <div>
+            <Link href="/Login" passHref><Button style={styles.buttonNav} variant="text">Cadastra-se</Button></Link>
+            <Link href="/Login" passHref><Button style={styles.conecte} variant="text">Login</Button></Link>
+          </div>
         </nav>
 
         <span style={styles.noelGroup}>
