@@ -9,6 +9,7 @@ import {
 } from "@mui/material";
 import Link from "next/link";
 import Sobre from "./Sobre";
+// import Contato from "./Contato"
 // import RedeemIcon from '@mui/icons-material/Redeem';
 
 
@@ -118,7 +119,7 @@ export default function Home() {
             
           <div>
            <Link href="/Sobre" passHref><Button style={styles.buttonNav} variant="text">Sobre</Button></Link>
-            <Link href="/Pedido" passHref><Button style={styles.buttonNav} variant="text">Faça um pedido</Button></Link>
+            <Link href="/Contato" passHref><Button style={styles.buttonNav} variant="text">Faça um pedido</Button></Link>
             <Link href="/Apadrinhamento" passHref><Button style={styles.buttonNav} variant="text">Apadrinhar</Button></Link>
           </div>
           <div>
@@ -141,6 +142,7 @@ export default function Home() {
       </div>
 
       <Sobre/>
+    
     </>
   );
 }
