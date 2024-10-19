@@ -2,14 +2,15 @@ import Head from "next/head";
 import styles from "@/styles/Home.module.css";
 import {
   Button,
+  ButtonGroup,
   StyledInput,
   HelperText,
   FormControl,
   Label,
-} from "@mui/material";
+}from "@mui/material";
 import Link from "next/link";
 import Sobre from "./Sobre";
-// import RedeemIcon from '@mui/icons-material/Redeem';
+import RedeemIcon from '@mui/icons-material/Redeem';
 
 
 
@@ -33,11 +34,18 @@ export default function Home() {
       border: "2px solid white",
       maxWidth:"85%",
       margin: "0% 15%",
-      gap: "16%"
+      gap: "16vh"
+    },
+
+    Logo:{
+      display:"flex", 
+      gap:"2vh",
     },
 
     buttonNav: {
       color:'white', 
+      background:"none",
+      border:"none",
       fontFamily:'Poppins', 
       fontSize:'16px',
       textTransform: "none",
@@ -49,6 +57,7 @@ export default function Home() {
       fontFamily:'Poppins',
       fontSize:'16px',
       textTransform: "none",
+      width: "15Vh",
     },
 
     noel: {
@@ -63,15 +72,15 @@ export default function Home() {
       color:'white', 
       fontFamily:'Poppins', 
       fontSize:'17px',
-      marginLeft: "10%", 
-      height:"50%",
-      width: "60%",
+      marginLeft: "10vh", 
+      height:"8vh",
+      width: "35vh",
       textTransform: "none",
     },
 
     gruopBottonsTitle: {
       display:'flex',
-      gap:'5%',
+      gap:'2vh',
       height:"15vh",  
     },
 
@@ -113,26 +122,27 @@ export default function Home() {
       <div style={styles.intro}> 
 
         <nav style={styles.navigator}>
-            {/* <i RedeemIcon/> */}
+          <div style={styles.Logo}>
+            <RedeemIcon/> 
             <h3 style={styles.noel}>Papai Noel</h3>
-            
-          <div>
-           <Link href="/Sobre" passHref><Button style={styles.buttonNav} variant="text">Sobre</Button></Link>
-            <Link href="/Pedido" passHref><Button style={styles.buttonNav} variant="text">Faça um pedido</Button></Link>
-            <Link href="/Apadrinhamento" passHref><Button style={styles.buttonNav} variant="text">Apadrinhar</Button></Link>
-          </div>
-          <div>
-            <Link href="/Login" passHref><Button style={styles.buttonNav} variant="text">Cadastra-se</Button></Link>
-            <Link href="/Login" passHref><Button style={styles.conecte} variant="text">Login</Button></Link>
-          </div>
+          </div> 
+          <ButtonGroup  style={styles.Logo} variant="text" aria-label="Basic button group">
+          <Link href="/Sobre" passHref><Button style={styles.buttonNav} variant="contained">Sobre</Button></Link>
+            <Link href="/Pedido" passHref><Button style={styles.buttonNav} variant="contained">Faça um pedido</Button></Link>
+            <Link href="/Apadrinhamento" passHref><Button style={styles.buttonNav} variant="contained">Apadrinhar</Button></Link>
+          </ButtonGroup>
+          <ButtonGroup style={styles.Logo} variant="text" aria-label="Basic button group">
+            <Link href="/Login" passHref><Button style={styles.buttonNav} variant="contained">Cadastra-se</Button></Link>
+            <Link href="/Login" passHref><Button style={styles.conecte} variant="contained">Login</Button></Link>
+          </ButtonGroup>
         </nav>
 
         <span style={styles.noelGroup}>
           <div style={styles.groupTitle}>
             <p style={styles.title}>Neste natal, faça a alegria de uma criança!</p>
             <div style={styles.gruopBottonsTitle}>
-              <Button style={styles.buttonsTitle} variant="text">Apadrinhar</Button>
-              <Button style={styles.buttonsTitle} variant="text">Faça um pedido</Button>
+              <Link href="/Apadrinhamento" passHref><Button style={styles.buttonsTitle}  variant="contained" sx={{transition: 'transform 0.3s','&:hover': {transform: 'scale(1.1)',},}}>Apadrinhar</Button></Link>
+              <Link href="/Pedido" passHref><Button style={styles.buttonsTitle}  variant="contained" sx={{transition: 'transform 0.3s','&:hover': {transform: 'scale(1.1)',},}}>Faça um pedido</Button></Link>
             </div>
           </div>
           <img src="./img/papai.png" alt="Descrição da imagem" className="minha-imagem"/>
