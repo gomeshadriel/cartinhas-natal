@@ -136,7 +136,7 @@ export default function Home() {
               <Button style={styles.buttonsTitle} variant="text">Faça um pedido</Button>
             </div>
           </div>
-          <img src="./img/papai.png" alt="Descrição da imagem" className="minha-imagem"/>
+          <img src="./img/papai.png" alt="imagem do papai noel" className="papai-noel"/>
         </span>
 
       </div>
