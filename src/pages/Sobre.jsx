@@ -16,7 +16,7 @@ function Sobre()  {
 
   const titleStyle = {
     fontWeight: 'bold',
-    fontFamily: 'Poppins',
+    fontFamily: 'Pacifico',
     marginBottom: '40px',
     marginLeft: '0px',
     color: 'black',
