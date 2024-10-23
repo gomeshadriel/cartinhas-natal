@@ -8,6 +8,7 @@ import Link from "next/link";
 import RedeemIcon from '@mui/icons-material/Redeem';
 import React from 'react';
 import UploadButton from "./upload";
+import Contato from "./Contato";
 
 
 
@@ -138,7 +139,9 @@ function Pedido() {
 
             </section>
           </div>
+        <Contato/>
         </>
+        
     );
   }
 
