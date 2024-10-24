@@ -13,7 +13,7 @@ function Sobre() {
 
   const titleStyle = {
     fontWeight: "bold",
-    fontFamily: "Poppins",
+    fontFamily: "Pacifico",
     marginBottom: "40px",
     marginLeft: "0px",
     color: "black",
@@ -22,6 +22,16 @@ function Sobre() {
     overflowWrap: "break-word", // Quebra palavras longas em navegadores mais novos
     wordBreak: "break-word",
     textAlign: "left",
+    fontWeight: 'bold',
+    fontFamily: 'Pacifico',
+    marginBottom: '40px',
+    marginLeft: '0px',
+    color: 'black',
+    fontSize: '60px',
+    wordWrap: 'break-word', // Quebra palavras longas
+    overflowWrap: 'break-word', // Quebra palavras longas em navegadores mais novos
+    wordBreak: 'break-word',
+    textAlign: 'left'
   };
 
   const textContainerStyle = {

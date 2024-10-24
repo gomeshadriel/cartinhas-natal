@@ -61,7 +61,7 @@ export default function Home() {
     },
 
     noel: {
-      fontFamily:'Poppins', 
+      fontFamily:'Pacifico', 
       fontSize:'20px',
       alignItens: "center",
       alignContent: "center",
@@ -85,9 +85,10 @@ export default function Home() {
     },
 
     title: {
-      fontSize:'80px', 
-      fontFamily:'Poppins',
-      marginLeft: "10%", 
+      fontSize:'13vh', 
+      fontFamily:'Pacifico',
+      marginLeft: "8%", 
+      lineHeight: "17vh",
     },
 
     groupTitle: {
@@ -104,7 +105,7 @@ export default function Home() {
       maxWidth:"85%",
       margin: "0% 15%",
       alignItems: "center",
-      marginTop: "9vh",
+      marginTop: "8vh",
     },
   };
 
@@ -151,6 +152,7 @@ export default function Home() {
       </div>
 
       <Sobre/>
+      <Contato/>
     </>
   );
 }
