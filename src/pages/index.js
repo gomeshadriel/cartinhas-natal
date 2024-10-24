@@ -134,7 +134,7 @@ export default function Home() {
             <Link href="/Apadrinhamento" passHref><Button style={styles.buttonNav} variant="contained">Apadrinhar</Button></Link>
           </ButtonGroup>
           <ButtonGroup style={styles.Logo} variant="text" aria-label="Basic button group">
-            <Link href="/Login" passHref><Button style={styles.buttonNav} variant="contained">Cadastra-se</Button></Link>
+            <Link href="/Cadastro" passHref><Button style={styles.buttonNav} variant="contained">Cadastra-se</Button></Link>
             <Link href="/Login" passHref><Button style={styles.conecte} variant="contained">Login</Button></Link>
           </ButtonGroup>
         </nav>
