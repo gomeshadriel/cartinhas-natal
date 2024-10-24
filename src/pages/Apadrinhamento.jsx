@@ -4,6 +4,7 @@ import CardCrianca from "./CardCrianca";
 import Link from "next/link";
 import { IconButton, Button } from "@mui/material";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import { Height } from "@mui/icons-material";
 
 const Apadrinhamento = () => {
   const [criancas, setCriancas] = useState([]);
@@ -105,6 +106,9 @@ const Apadrinhamento = () => {
     viewAllButtonHover: {
       backgroundColor: "#2e7d32",
     },
+    loading: {
+      margin: "250px",
+    },
   };
 
   return (
@@ -129,10 +133,14 @@ const Apadrinhamento = () => {
             />
           ))
         ) : (
-          <p>Carregando dados...</p>
+          <div style={styles.loading}>
+            <p>Carregando dados...</p>
+          </div>
         )}
       </div>
-      <Button style={styles.viewAllButton}>Ver todos os desejos</Button>
+      <Button variant="contained" style={styles.viewAllButton}>
+        Ver todos os desejos
+      </Button>
     </div>
   );
 };

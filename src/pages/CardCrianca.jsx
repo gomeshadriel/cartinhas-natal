@@ -63,7 +63,7 @@ const CardCrianca = ({ name, school, wish, image }) => {
         </div>
       </div>
       <p>{wish}</p>
-      <Button style={styles.button}>
+      <Button variant="contained" style={styles.button}>
         <i className="fas fa-gift"></i>
         <RedeemIcon /> Presentear <RedeemIcon />
       </Button>
