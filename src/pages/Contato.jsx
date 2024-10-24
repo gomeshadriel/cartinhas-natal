@@ -10,15 +10,15 @@ const styles = {
     flexDirection: "column",
     gap: "40px",
   },
- 
+
   title: {
     fontSize: "48px",
-    fontFamily: "Poppins",
+    fontFamily: "Pacifico",
     weight: "400",
     marginLeft: "8%",
     color: "#FBFBFB",
   },
- 
+
   names: {
     fontSize: "24px",
     display: "flex",
@@ -26,15 +26,15 @@ const styles = {
     fontFamily: "Poppins",
     color: "#886A19",
   },
- 
+
   finalContent: {
     fontSize: "40px",
-    fontFamily: "Poppins",
+    fontFamily: "Pacifico",
     margin: "0% 0% 0% 2%",
     weight: "400",
     color: "#006207",
   },
- 
+
   icon: {
     display: "flex",
     flexDirection: "column",
@@ -100,6 +100,7 @@ function Contato() {
             <h3 style={styles.names}>Eduardo Vitor</h3>
             <div style={styles.contentLink}>
               <a
+                target="_blank"
                 style={styles.socialMedia}
                 href="https://www.linkedin.com/in/eduardo-vítor/"
               >
@@ -108,6 +109,7 @@ function Contato() {
               </a>
 
               <a
+                target="_blank"
                 style={styles.socialMedia}
                 href="https://github.com/EduardoVitor020"
               >
@@ -121,6 +123,7 @@ function Contato() {
             <h3 style={styles.names}>Hadriel Gomes</h3>
             <div style={styles.contentLink}>
               <a
+                target="_blank"
                 style={styles.socialMedia}
                 href="https://www.linkedin.com/in/gomeshadriel/"
               >
@@ -129,6 +132,7 @@ function Contato() {
               </a>
 
               <a
+                target="_blank"
                 style={styles.socialMedia}
                 href="https://github.com/gomeshadriel"
               >
@@ -142,6 +146,7 @@ function Contato() {
             <h3 style={styles.names}>Juan Pablo</h3>
             <div style={styles.contentLink}>
               <a
+                target="_blank"
                 style={styles.socialMedia}
                 href="https://www.linkedin.com/in/juanpabloflg/"
               >
@@ -150,6 +155,7 @@ function Contato() {
               </a>
 
               <a
+                target="_blank"
                 style={styles.socialMedia}
                 href="https://github.com/juanpabloflg"
               >
@@ -162,14 +168,22 @@ function Contato() {
           <div style={styles.cardNames}>
             <h3 style={styles.names}>Lucas Belo</h3>
             <div style={styles.contentLink}>
-              <a style={styles.socialMedia} href="exemplo.com">
+              <a
+                target="_blank"
+                style={styles.socialMedia}
+                href="https://www.linkedin.com/in/lucasbelocarvalho15/"
+              >
                 <LinkedInIcon />
-                <p>Lucas Belo</p>
+                <p>lucasbelocarvalho15</p>
               </a>
 
-              <a style={styles.socialMedia} href="exemplo.com">
+              <a
+                target="_blank"
+                style={styles.socialMedia}
+                href="https://github.com/lucasbelo01"
+              >
                 <GitHubIcon />
-                <p>Lucas Belo</p>
+                <p>lucasbelo01</p>
               </a>
               <div />
             </div>
@@ -178,6 +192,7 @@ function Contato() {
             <h3 style={styles.names}>Milena Mafra</h3>
             <div style={styles.contentLink}>
               <a
+                target="_blank"
                 style={styles.socialMedia}
                 href="https://www.linkedin.com/in/milenamafra/"
               >
@@ -186,6 +201,7 @@ function Contato() {
               </a>
 
               <a
+                target="_blank"
                 style={styles.socialMedia}
                 href="https://github.com/milenamafra96"
               >
@@ -199,6 +215,7 @@ function Contato() {
             <h3 style={styles.names}>Samara Alves</h3>
             <div style={styles.contentLink}>
               <a
+                target="_blank"
                 style={styles.socialMedia}
                 href="https://www.linkedin.com/in/samaraalvesg/"
               >
@@ -207,6 +224,7 @@ function Contato() {
               </a>
 
               <a
+                target="_blank"
                 style={styles.socialMedia}
                 href="https://github.com/samaraalvesgomes"
               >

@@ -1,6 +1,7 @@
 // Apadrinhamento.jsx
 import React, { useEffect, useState } from "react";
 import CardCrianca from "./CardCrianca";
+import Contato from "./Contato";
 import Link from "next/link";
 import { IconButton, Button } from "@mui/material";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
@@ -112,7 +113,8 @@ const Apadrinhamento = () => {
   };
 
   return (
-    <div style={styles.pageContainer}>
+    <div>
+      <div style={styles.pageContainer}>
       <div style={styles.header}>
         <h1 style={styles.title}>Realize o sonho de uma criança</h1>
         <Link href="/" passHref>
@@ -138,11 +140,12 @@ const Apadrinhamento = () => {
           </div>
         )}
       </div>
-      <Button variant="contained" style={styles.viewAllButton}>
-        Ver todos os desejos
-      </Button>
+      <Button style={styles.viewAllButton}>Ver todos os desejos</Button>
+      </div>
+      <Contato/>
     </div>
   );
+
 };
 
 export default Apadrinhamento;
