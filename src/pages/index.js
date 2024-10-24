@@ -10,6 +10,7 @@ import {
 }from "@mui/material";
 import Link from "next/link";
 import Sobre from "./Sobre";
+import Contato from "./Contato";
 import RedeemIcon from '@mui/icons-material/Redeem';
 
 
