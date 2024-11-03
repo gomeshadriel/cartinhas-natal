@@ -42,7 +42,6 @@ function Cadastro() {
 
     Logo: {
       display: "flex",
-      gap: "2vh",
     },
 
     buttonPerson: (isActive) => ({
