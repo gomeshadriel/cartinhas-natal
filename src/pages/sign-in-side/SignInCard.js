@@ -86,6 +86,7 @@ export default function SignInCard() {
     }
 
     return isValid;
+    
   };
 
   return (
@@ -150,14 +151,14 @@ export default function SignInCard() {
             fullWidth
             variant="outlined"
             color={passwordError ? 'error' : 'primary'}
-          />
+          />  
         </FormControl>
         <FormControlLabel
           control={<Checkbox value="remember" color="primary" />}
           label="Manter conectado"
         />
         <ForgotPassword open={open} handleClose={handleClose} />
-        <Button type="submit" fullWidth variant="contained" onClick={validateInputs}>
+        <Button type="button" fullWidth variant="contained" onClick={validateInputs} href="/Apadrinhamento"> 
           Entrar
         </Button>
         <Typography sx={{ textAlign: 'center' }}>

@@ -11,7 +11,7 @@ import RedeemIcon from '@mui/icons-material/Redeem';
 import React from 'react';
 import UploadButton from "./upload";
 import Contato from "./Contato";
-import SignInSide from "./pastateste/SignInSide";
+import SignInSide from "./sign-in-side/SignInSide";
 
 
 
