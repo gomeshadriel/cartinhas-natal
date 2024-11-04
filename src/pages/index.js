@@ -12,7 +12,7 @@ import Link from "next/link";
 import Sobre from "./Sobre";
 import Contato from "./Contato";
 import RedeemIcon from '@mui/icons-material/Redeem';
-
+import SignInSide from "./sign-in-side/SignInSide";
 
 
 export default function Home() {
@@ -135,7 +135,7 @@ export default function Home() {
           </ButtonGroup>
           <ButtonGroup style={styles.Logo} variant="text" aria-label="Basic button group">
             <Link href="/Cadastro" passHref><Button style={styles.buttonNav} variant="contained">Cadastra-se</Button></Link>
-            <Link href="/Login" passHref><Button style={styles.conecte} variant="contained">Login</Button></Link>
+            <Link href="./sign-in-side/SignInSide" passHref><Button style={styles.conecte} variant="contained">Login</Button></Link>
           </ButtonGroup>
         </nav>
 
