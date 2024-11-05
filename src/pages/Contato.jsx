@@ -93,6 +93,7 @@ const styles = {
 function Contato() {
   return (
     <>
+    
       <div style={styles.intro}>
         <div style={styles.title}>Desenvolvedores</div>
         <div style={styles.cardRow}>
