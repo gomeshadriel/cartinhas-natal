@@ -129,7 +129,7 @@ export default function Home() {
             variant="text"
             aria-label="Basic button group"
           >
-            <Link href="/Sobre" passHref>
+            <Link href="#scrollSobre" passHref>
               <Button style={styles.buttonNav} variant="contained">
                 Sobre
               </Button>
