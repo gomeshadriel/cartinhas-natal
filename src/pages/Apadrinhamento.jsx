@@ -1,66 +1,40 @@
-// Apadrinhamento.jsx
 import React, { useEffect, useState } from "react";
 import CardCrianca from "./CardCrianca";
 import Contato from "./Contato";
 import Link from "next/link";
 import { IconButton, Button } from "@mui/material";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
-import { Height } from "@mui/icons-material";
 import Head from "next/head";
 
 const Apadrinhamento = () => {
   const [criancas, setCriancas] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-  // Função que simula a chamada a um endpoint e retorna dados mockados
+  // Função que busca dados da API
   useEffect(() => {
     const fetchCriancas = async () => {
-      // Simulando um delay para a chamada do "endpoint"
-      setTimeout(() => {
-        const mockData = [
-          {
-            name: "João Pedro",
-            school: "Escola Estadual Girassol",
-            wish: "Meu sonho é ter uma bicicleta.",
-            image:
-              "https://blog-leiturinha-novo.s3.us-east-1.amazonaws.com/production/uploads/2021/04/iStock-187185569-1.jpg",
-          },
-          {
-            name: "Ana Maria",
-            school: "Escola Estadual Girassol",
-            wish: "Sempre quis um de kit aquarela.",
-            image: "https://arteref.com/wp-content/uploads/2017/01/900X700.jpg",
-          },
-          {
-            name: "Isabella Costa",
-            school: "Escola Estadual Girassol",
-            wish: "Eu queria um livro de histórias.",
-            image:
-              "https://unicardio.com.br/wp-content/uploads/2020/12/4-cuidados-com-o-coracao-das-criancas.png",
-          },
-          {
-            name: "Miguel Oliveira",
-            school: "Escola Estadual Girassol",
-            wish: "Meu sonho é ter um patinete.",
-            image:
-              "https://saudefortaleza.com.br/wp-content/uploads/2020/08/Sa%C3%BAde-Ocular-scaled.jpg",
-          },
-          {
-            name: "Rafaela Lima",
-            school: "Escola Estadual Girassol",
-            wish: "Eu queria um sabre de luz.",
-            image:
-              "https://centrodecatarata.com.br/wp-content/uploads/2023/04/visao_infantil__centro_de_catarata_madureia_blog.jpg",
-          },
-          {
-            name: "Enzo Valentino",
-            school: "Escola Estadual Girassol",
-            wish: "Eu queria uma bicicleta",
-            image:
-              "https://www.marinha.mil.br/saudenaval/sites/www.marinha.mil.br.saudenaval/files/volta_as_aulas_redes.jpg",
-          },
-        ];
-        setCriancas(mockData);
-      }, 1000); // Delay de 1 segundo para simular a chamada à API
+      try {
+        setLoading(true);
+        const response = await fetch("http://localhost:4000/api/criancas");
+        console.log(response);
+        if (!response.ok) {
+          throw new Error("Erro ao buscar dados da API");
+        }
+        const data = await response.json();
+
+        const formattedData = data.map((item) => ({
+          name: item.nome,
+          school: item.escola,
+          wish: item.cartinha,
+          image: item.imagem,
+        }));
+        setCriancas(formattedData);
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
     };
 
     fetchCriancas();
@@ -78,7 +52,6 @@ const Apadrinhamento = () => {
     header: {
       display: "flex",
       flexDirection: "row",
-      display: "flex",
       justifyContent: "center",
       gap: "520px",
       fontFamily: "Pacifico",
@@ -105,11 +78,12 @@ const Apadrinhamento = () => {
       marginTop: "20px",
       cursor: "pointer",
     },
-    viewAllButtonHover: {
-      backgroundColor: "#2e7d32",
-    },
     loading: {
       margin: "250px",
+    },
+    error: {
+      color: "red",
+      marginTop: "20px",
     },
   };
 
@@ -131,9 +105,17 @@ const Apadrinhamento = () => {
               </IconButton>
             </Link>
           </div>
-          <div style={styles.cardsContainer}>
-            {criancas.length > 0 ? (
-              criancas.map((crianca, index) => (
+          {loading ? (
+            <div style={styles.loading}>
+              <p>Carregando dados...</p>
+            </div>
+          ) : error ? (
+            <div style={styles.error}>
+              <p>{error}</p>
+            </div>
+          ) : (
+            <div style={styles.cardsContainer}>
+              {criancas.map((crianca, index) => (
                 <CardCrianca
                   key={index}
                   name={crianca.name}
@@ -141,13 +123,9 @@ const Apadrinhamento = () => {
                   wish={crianca.wish}
                   image={crianca.image}
                 />
-              ))
-            ) : (
-              <div style={styles.loading}>
-                <p>Carregando dados...</p>
-              </div>
-            )}
-          </div>
+              ))}
+            </div>
+          )}
           <Button style={styles.viewAllButton}>Ver todos os desejos</Button>
         </div>
         <Contato />
