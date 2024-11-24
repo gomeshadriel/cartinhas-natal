@@ -1,40 +1,69 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🎅 Cartinhas de Natal
+### 🤝Colaboradores
+- [Eduardo Vitor](https://github.com/EduardoVitor020)
+- [Hadriel Gomes](https://github.com/gomeshadriel)
+- [Juan Pablo](https://github.com/juanpabloflg)
+- [Lucas Belo](https://github.com/juanpabloflg)
+- [Milena Mafra](https://github.com/milenamafra96)
+- [Samara Alves](https://github.com/samaraalvesgomes)
+  
+ 
+### 🎯Sobre o Projeto
+O objetivo deste projeto é desenvolver uma plataforma que consiga além de unir crianças carentes e padrinhos, incentivar o apadrinhamento destas crianças, A ideia é que escolas de regiões periféricas possam cadastrar as crianças carentes com seus nomes e suas cartinhas de natal com o desejo da criança, assim podemos listar todos esses desejos e o padrinho pode escolher quais crianças apadrinhar.
 
-## Getting Started
+![image](https://github.com/user-attachments/assets/262df139-03fd-4de4-af86-2c3611c0cec5)
 
-First, run the development server:
 
+## 📋Como clonar e rodar o projeto da UI
+
+Siga os passos abaixo para configurar o projeto em sua máquina local:
+
+### Pré-requisitos
+Certifique-se de ter instalado:
+- [Node.js](https://nodejs.org/) (versão LTS recomendada)
+- [Git](https://git-scm.com/)
+
+### Passo 1: Clonar o repositório
+No local onde você deseja salvar o projeto, abra o terminal e execute o comando abaixo:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/gomeshadriel/cartinhas-natal.git'
 ```
+### Passo 2: Abrir o projeto
+Abra a pasta raiz do projeto na IDE de sua preferência (recomendamos o VS Code).
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Passo 3: Instale todas as dependencias do projeto
+No terminal da sua IDE, instale as dependências do projeto com o comando:
+```node
+npm install
+```
+### Passo 4: Executando e acessando o projeto
+Para iniciar o projeto, execute o comando:
+```node
+npm run dev
+```
+Após a execução, um link será exibido no terminal. Abra-o no navegador de sua preferência (recomendamos o Google Chrome).
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Geralmente, o link padrão será http://localhost:3000. Caso a porta 3000 já esteja em uso, um link alternativo será gerado. Sempre utilize o link exibido no terminal para evitar problemas.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## 📋Como clonar e executar a API
+A página de apadrinhamento utiliza uma API para carregar as informações das crianças. No futuro, essa mesma API será usada para tornar as outras páginas da aplicação mais dinâmicas. Siga os passos abaixo para acessar as informações disponibilizadas pela API:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### Passo 1: Clonar o repositório
+No local onde você deseja salvar o projeto, abra o terminal e execute o comando abaixo: (Certifique-se de que a API esteja em uma pasta separada da pasta raiz do projeto da interface (UI) para evitar conflitos.)
+```bash
+git clone https://github.com/gomeshadriel/APIServer-Cartinhas-Natal.git'
+```
+### Passo 2: Abrir o projeto
+Abra a pasta raiz do projeto na IDE de sua preferência (recomendamos o VS Code).
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Passo 3: Instale todas as dependencias do projeto
+No terminal da sua IDE, instale as dependências do projeto com o comando:
+```node
+npm install
+```
+### Passo 4: Executando e acessando o projeto
+Para iniciar a execução da API, com o comando:
+```node
+node server.js
+```
+⭐Pronto! Com o projeto da interface (UI) e a API em execução, a página de apadrinhamento estará funcionando corretamente.
