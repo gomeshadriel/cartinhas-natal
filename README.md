@@ -3,7 +3,7 @@
 - [Eduardo Vitor](https://github.com/EduardoVitor020)
 - [Hadriel Gomes](https://github.com/gomeshadriel)
 - [Juan Pablo](https://github.com/juanpabloflg)
-- [Lucas Belo](https://github.com/juanpabloflg)
+- [Lucas Belo](https://github.com/lucasbelo01)
 - [Milena Mafra](https://github.com/milenamafra96)
 - [Samara Alves](https://github.com/samaraalvesgomes)
   
