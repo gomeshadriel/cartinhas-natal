@@ -93,7 +93,6 @@ const styles = {
 function Contato() {
   return (
     <>
-    
       <div style={styles.intro}>
         <div style={styles.title}>Desenvolvedores</div>
         <div style={styles.cardRow}>
@@ -166,29 +165,7 @@ function Contato() {
               <div />
             </div>
           </div>
-          <div style={styles.cardNames}>
-            <h3 style={styles.names}>Lucas Belo</h3>
-            <div style={styles.contentLink}>
-              <a
-                target="_blank"
-                style={styles.socialMedia}
-                href="https://www.linkedin.com/in/lucasbelocarvalho15/"
-              >
-                <LinkedInIcon />
-                <p>lucasbelocarvalho15</p>
-              </a>
 
-              <a
-                target="_blank"
-                style={styles.socialMedia}
-                href="https://github.com/lucasbelo01"
-              >
-                <GitHubIcon />
-                <p>lucasbelo01</p>
-              </a>
-              <div />
-            </div>
-          </div>
           <div style={styles.cardNames}>
             <h3 style={styles.names}>Milena Mafra</h3>
             <div style={styles.contentLink}>
